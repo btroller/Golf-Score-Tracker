@@ -14,15 +14,7 @@ impl Player {
     }
 }
 
-/*
-impl Player {
-    fn totalScore(self) -> i32 {
-        let sumOfScores = self.scores.iter().sum();
-        return sumOfScores;
-    }
-}
-*/
-
+// Scan a string from `stdin`
 fn scanString() -> String {
     loop {
         let mut scannedLine = String::new();
@@ -34,6 +26,7 @@ fn scanString() -> String {
     }
 }
 
+// Scan an `i32` from `stdin`, trying as many times as necessary
 fn scanInt() -> i32 {
     loop {
         let scannedString = scanString();
@@ -45,6 +38,7 @@ fn scanInt() -> i32 {
     }
 }
 
+// Scan a positive nonzero `i32` from `stdin`, trying as many times as necessary
 fn scanStrictlyPositiveInt() -> i32 {
     loop {
         let scannedInt = scanInt();
@@ -111,5 +105,4 @@ fn main() {
         }
         println!();
     }
-
 }

@@ -4,6 +4,8 @@ This is a very simple tool I wrote to track scores in games of [Golf](https://en
 
 I wrote this to experiment with Rust, which I haven't used before. Maybe I'll update it to leverage the language better in the future, but I was only shooting for a minimally-viable product.
 
+Apologies for not using snake_case -- I just can't help myself.
+
 ## TODO
 
 * Add ability to edit scores
