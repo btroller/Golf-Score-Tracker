@@ -19,8 +19,9 @@ fn scanString() -> String {
     loop {
         let mut scannedLine = String::new();
 
-        io::stdin().read_line(&mut scannedLine)
-            .expect("Failed to read line");
+        io::stdin().read_line(&mut scannedLine).expect(
+            "Failed to read line",
+        );
 
         return scannedLine.trim().to_string();
     }
@@ -64,7 +65,11 @@ fn main() {
         // Prompt each player for name
         println!("What is player {}'s name?", playerNum);
         let scannedPlayerName = scanString();
-        let mut player = Player { scores: vec![0], name: scannedPlayerName, totalScore: 0 };
+        let mut player = Player {
+            scores: vec![0],
+            name: scannedPlayerName,
+            totalScore: 0,
+        };
         // Put player in `players` Vec
         players.push(player);
     }
@@ -76,7 +81,7 @@ fn main() {
         // Print current standings
         println!();
         println!("Hole {} standings: ", numHolesPlayed);
-        players.sort_by(|a, b| b.totalScore.cmp(&a.totalScore)); 
+        players.sort_by(|a, b| b.totalScore.cmp(&a.totalScore));
         for player in players.iter() {
             print!("  {} has {}:  ", player.name, player.totalScore);
             for individualHoleScore in player.scores.iter() {
@@ -85,11 +90,12 @@ fn main() {
             println!();
         }
 
-        // Ask for results of hole
+        // Ask for results of hole for each player
         println!();
         for mut player in players.iter_mut() {
             println!("What did {} score?", player.name);
             let score = scanInt();
+            // Add this hole's score to previous scores
             player.justScored(score);
         }
     }
@@ -97,7 +103,7 @@ fn main() {
     // Print final standings
     println!();
     println!("Final standings:");
-    players.sort_by(|a, b| b.totalScore.cmp(&a.totalScore)); 
+    players.sort_by(|a, b| b.totalScore.cmp(&a.totalScore));
     for player in players.iter() {
         print!("  {} has {}:  ", player.name, player.totalScore);
         for individualHoleScore in player.scores.iter() {
