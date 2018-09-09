@@ -1,3 +1,6 @@
+// Apologies to all who care -- I'm just used to camelCase
+#![allow(non_snake_case)]
+
 use std::io;
 
 struct Player {
@@ -61,7 +64,7 @@ fn main() {
 
     // Make Vec of Players
     let mut players: Vec<Player> = Vec::new();
-    for playerNum in (1..(numPlayers + 1)) {
+    for playerNum in 1..(numPlayers + 1) {
         // Prompt each player for name
         println!("What is player {}'s name?", playerNum);
         let scannedPlayerName = scanString();
