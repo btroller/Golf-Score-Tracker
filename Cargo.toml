@@ -1,0 +1,6 @@
+[package]
+name = "Golf-Score-Tracker"
+version = "0.1.0"
+authors = ["Benjamin Troller <bctroller@gmail.com>"]
+
+[dependencies]
