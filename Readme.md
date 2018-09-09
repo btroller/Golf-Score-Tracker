@@ -1,4 +1,4 @@
-# Golf Score Tracker
+# Golf Score Tracker [![Build Status](https://travis-ci.com/btroller/Golf-Score-Tracker.svg?branch=master)](https://travis-ci.com/btroller/Golf-Score-Tracker)
 
 This is a very simple tool I wrote to track scores in games of [Golf](https://en.wikipedia.org/wiki/Golf_(card_game)). 
 
