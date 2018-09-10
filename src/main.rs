@@ -84,7 +84,7 @@ fn main() {
         // Print current standings
         println!();
         println!("Hole {} standings: ", numHolesPlayed);
-        players.sort_by(|a, b| b.totalScore.cmp(&a.totalScore));
+        players.sort_by(|a, b| a.totalScore.cmp(&b.totalScore));
         for player in players.iter() {
             print!("  {} has {}:  ", player.name, player.totalScore);
             for individualHoleScore in player.scores.iter() {
@@ -106,7 +106,7 @@ fn main() {
     // Print final standings
     println!();
     println!("Final standings:");
-    players.sort_by(|a, b| b.totalScore.cmp(&a.totalScore));
+    players.sort_by(|a, b| a.totalScore.cmp(&b.totalScore));
     for player in players.iter() {
         print!("  {} has {}:  ", player.name, player.totalScore);
         for individualHoleScore in player.scores.iter() {
